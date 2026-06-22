@@ -10,6 +10,10 @@ class Lead extends Model
     protected $table = 'leads';
     protected $guarded = ['id'];
 
+    protected $casts = [
+        'extra' => 'array',
+    ];
+
     public function seminario(): BelongsTo
     {
         return $this->belongsTo(Seminario::class);
