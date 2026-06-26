@@ -14,7 +14,7 @@
         Recebemos seus dados para o seminário <strong>{{ $seminario->titulo }}</strong>.
         Nossa equipe entrará em contato em breve com as próximas etapas e a confirmação da sua vaga.
       </p>
-      <a href="{{ route('seminarios.show', $seminario) }}" class="btn btn--cyan">
+      <a href="{{ route('govsocial') }}" class="btn btn--cyan">
         Voltar ao seminário <span class="arrow">→</span>
       </a>
     </div>

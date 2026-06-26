@@ -10,10 +10,12 @@ use Illuminate\Support\Str;
 class LeadController extends Controller
 {
     /**
-     * Recebe a inscrição enviada pela LP, grava como lead e dispara o webhook.
+     * Recebe a inscrição da LP (/govsocial), grava o lead e dispara o webhook.
      */
-    public function store(StoreLeadRequest $request, Seminario $seminario)
+    public function store(StoreLeadRequest $request)
     {
+        $seminario = $this->seminario();
+
         // UTMs: do request (hidden) ou da sessão (capturadas no acesso à LP)
         $utmSessao = session('utm', []);
         $utm = [
@@ -68,21 +70,31 @@ class LeadController extends Controller
             'UTM_Term'          => $utm['utm_term'],
         ];
 
-        // Dispara após enviar a resposta — não atrasa o "obrigado" do usuário.
         EnviarLeadWebhook::dispatchAfterResponse($payload);
 
         return redirect()
-            ->route('seminarios.obrigado', $seminario)
+            ->route('govsocial.obrigado')
             ->with('lead_nome', $lead->nome);
     }
 
-    public function obrigado(Seminario $seminario)
+    public function obrigado()
     {
+        $seminario = $this->seminario();
+
         return view('seminarios.obrigado', [
             'seminario' => $seminario,
             'paleta'    => $seminario->paleta(),
             'nome'      => session('lead_nome'),
         ]);
+    }
+
+    /**
+     * Resolve o seminário GovSocial (por slug) com fallback no mais recente.
+     */
+    private function seminario(): Seminario
+    {
+        return Seminario::where('slug', 'gestao-midias-sociais-setor-publico')->first()
+            ?? Seminario::query()->latest()->firstOrFail();
     }
 
     private function dispositivo(?string $ua): string

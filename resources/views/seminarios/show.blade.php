@@ -681,7 +681,7 @@
         <p class="form-sub">Preencha os dados e nossa equipe entra em contato para garantir sua vaga.</p>
 
         {{-- AJUSTE o action abaixo para o endpoint que recebe a inscrição --}}
-        <form method="POST" action="/seminarios/gestao-midias-sociais-setor-publico/inscricao">
+        <form method="POST" action="{{ route('govsocial.inscricao') }}">
           @csrf
           <div class="form-grid">
             <div class="field col-2">

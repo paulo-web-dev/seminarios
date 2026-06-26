@@ -12,21 +12,20 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 */
 
-Route::get('/', [SeminarioController::class, 'home'])->name('home');
+// Landing GovSocial em /govsocial
+Route::get('/govsocial', [SeminarioController::class, 'govsocial'])->name('govsocial');
+Route::post('/govsocial/inscricao', [LeadController::class, 'store'])->name('govsocial.inscricao');
+Route::get('/govsocial/obrigado', [LeadController::class, 'obrigado'])->name('govsocial.obrigado');
 
-Route::prefix('seminarios')->name('seminarios.')->group(function () {
-    Route::get('/{seminario}', [SeminarioController::class, 'show'])->name('show');
-    Route::post('/{seminario}/inscricao', [LeadController::class, 'store'])->name('inscricao');
-    Route::get('/{seminario}/obrigado', [LeadController::class, 'obrigado'])->name('obrigado');
-});
+// Home e a URL antiga redirecionam para /govsocial
+Route::get('/', fn () => redirect()->route('govsocial'))->name('home');
+Route::redirect('/seminarios/gestao-midias-sociais-setor-publico', '/govsocial');
 
 /*
 |--------------------------------------------------------------------------
 | Área administrativa — /admin
 |--------------------------------------------------------------------------
 */
-
-// Login (rota 'login' é o destino padrão do middleware auth)
 Route::get('admin/login', [AuthController::class, 'showLogin'])->name('login');
 Route::post('admin/login', [AuthController::class, 'login'])
     ->middleware('throttle:10,1')->name('login.store');
