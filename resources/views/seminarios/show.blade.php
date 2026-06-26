@@ -32,7 +32,7 @@
       <img src="{{ asset('img/seminarios/govsocial/img-evento-cheio.jpg') }}" alt="Gestão de Mídias Sociais no Setor Público">
     </div>
     <div class="wrap hero__inner">
-      <span class="badge badge--orange">Imersão presencial · 25 a 28 de agosto · Vagas limitadas</span>
+      <span class="badge badge--orange">Imersão presencial · 18 a 21 de agosto · Vagas limitadas</span>
 
       <h1>Gestão de <span class="cy">Mídias Sociais</span> no Setor Público</h1>
 
@@ -47,7 +47,7 @@
 
       <div class="hero__cta">
         <a href="#inscricao" class="btn btn--cyan">Garantir minha vaga <span class="arrow">→</span></a>
-        <span class="hero__meta">Presencial · 25 a 28 de agosto de 2026</span>
+        <span class="hero__meta">Presencial · 18 a 21 de agosto de 2026</span>
       </div>
 
       <div class="cobrand">
@@ -260,12 +260,12 @@
       <div class="sec-head">
         <span class="kicker">Programação</span>
         <h2>Seis painéis, do operacional ao estratégico</h2>
-        <p>De 25 a 28 de agosto de 2026 — quatro dias com a jornada completa: operação, conteúdo, publicidade, LGPD e estratégia.</p>
+        <p>De 18 a 21 de agosto de 2026 — quatro dias com a jornada completa: operação, conteúdo, publicidade, LGPD e estratégia.</p>
       </div>
       <div class="prog-days">
 
         <div class="day-group">
-          <div class="day-group__label"><span>Ter · 25/08</span></div>
+          <div class="day-group__label"><span>Ter · 18/08</span></div>
           <div class="day-group__panels">
             <article class="panel">
               <div class="panel__head">
@@ -281,7 +281,7 @@
         </div>
 
         <div class="day-group">
-          <div class="day-group__label"><span>Qua · 26/08</span></div>
+          <div class="day-group__label"><span>Qua · 19/08</span></div>
           <div class="day-group__panels">
             <article class="panel">
               <div class="panel__head">
@@ -315,7 +315,7 @@
         </div>
 
         <div class="day-group">
-          <div class="day-group__label"><span>Qui · 27/08</span></div>
+          <div class="day-group__label"><span>Qui · 20/08</span></div>
           <div class="day-group__panels">
             <article class="panel">
               <div class="panel__head">
@@ -349,7 +349,7 @@
         </div>
 
         <div class="day-group">
-          <div class="day-group__label"><span>Sex · 28/08</span></div>
+          <div class="day-group__label"><span>Sex · 21/08</span></div>
           <div class="day-group__panels">
             <article class="panel">
               <div class="panel__head">
