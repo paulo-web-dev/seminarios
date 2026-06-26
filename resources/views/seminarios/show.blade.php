@@ -19,7 +19,7 @@
       <div class="nav__brand">
         <img src="{{ asset('img/logo-unyflex-white.png') }}" alt="Unyflex">
         <span class="sep"></span>
-        <span class="tag">GovSocial</span>
+        <span class="tag">Seminario GovSocial</span>
       </div>
       <a href="#inscricao" class="nav__cta">Garantir vaga</a>
     </div>
@@ -195,7 +195,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> 
     </div>
   </section> --}}
 
