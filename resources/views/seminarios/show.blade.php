@@ -8,10 +8,21 @@
   (Não depende mais de $seminario nem do banco.)
   Imagens apontam para public/img/seminarios/govsocial/ — ajuste
   os nomes dos arquivos para os que você realmente tem.
+
+  Mudanças desta versão:
+   • Cada dobra (seção) contém um CTA que leva ao formulário (#form).
+   • Formulário sem o campo "Mensagem".
   ============================================================
 --}}
 
 @section('body')
+
+  {{-- Estilo do CTA de dobra (self-contained, não depende do govsocial.css) --}}
+  <style>
+    .sec-cta{display:flex;justify-content:center;margin-top:44px}
+    .sec-cta .btn{min-width:264px;justify-content:center}
+    @media(max-width:560px){.sec-cta .btn{width:100%}}
+  </style>
 
   {{-- ============ NAV ============ --}}
   <nav class="nav">
@@ -21,7 +32,7 @@
         <span class="sep"></span>
         <span class="tag">Seminario GovSocial</span>
       </div>
-      <a href="#inscricao" class="nav__cta">Garantir vaga</a>
+      <a href="#form" class="nav__cta">Garantir vaga</a>
     </div>
   </nav>
 
@@ -46,7 +57,7 @@
       </div>
 
       <div class="hero__cta">
-        <a href="#inscricao" class="btn btn--cyan">Garantir minha vaga <span class="arrow">→</span></a>
+        <a href="#form" class="btn btn--cyan">Garantir minha vaga <span class="arrow">→</span></a>
         <span class="hero__meta">Presencial · 18 a 21 de agosto de 2026</span>
       </div>
 
@@ -92,6 +103,9 @@
           <h3>Operação na prática</h3>
           <p>Calendário editorial, fluxo de aprovação, atendimento ao cidadão e métricas que importam para a gestão.</p>
         </article>
+      </div>
+      <div class="sec-cta">
+        <a href="#form" class="btn btn--cyan">Quero participar dessa imersão <span class="arrow">→</span></a>
       </div>
     </div>
   </section>
@@ -157,6 +171,9 @@
           </div>
         </article>
 
+      </div>
+      <div class="sec-cta">
+        <a href="#form" class="btn btn--cyan">Garantir minha vaga na imersão <span class="arrow">→</span></a>
       </div>
     </div>
   </section>
@@ -249,6 +266,9 @@
           <h3>Kit personalizado</h3>
           <p>Kit do participante com os materiais do seminário.</p>
         </article>
+      </div>
+      <div class="sec-cta">
+        <a href="#form" class="btn btn--cyan">Quero todos esses benefícios <span class="arrow">→</span></a>
       </div>
     </div>
   </section>
@@ -365,6 +385,9 @@
         </div>
 
       </div>
+      <div class="sec-cta">
+        <a href="#form" class="btn btn--cyan">Garantir minha vaga <span class="arrow">→</span></a>
+      </div>
     </div>
   </section>
 
@@ -450,6 +473,9 @@
           <span>Gestores de marketing institucional</span>
         </div>
       </div>
+      <div class="sec-cta">
+        <a href="#form" class="btn btn--cyan">É pra mim — quero me inscrever <span class="arrow">→</span></a>
+      </div>
     </div>
   </section>
 
@@ -473,6 +499,9 @@
         <span class="quote__mark">“</span>
         <blockquote>Saí com um plano claro para reorganizar as redes da prefeitura e muito mais segurança em relação à LGPD. Valeu cada minuto.</blockquote>
         <cite>— Participante de edição anterior, Assessoria de Comunicação Municipal</cite>
+      </div>
+      <div class="sec-cta">
+        <a href="#form" class="btn btn--cyan">Quero fazer parte da próxima edição <span class="arrow">→</span></a>
       </div>
     </div>
   </section>
@@ -601,6 +630,9 @@
         </article>
 
       </div>
+      <div class="sec-cta">
+        <a href="#form" class="btn btn--cyan">Aprender com esses especialistas <span class="arrow">→</span></a>
+      </div>
     </div>
   </section>
 
@@ -709,11 +741,6 @@
               <input type="text" id="cargo" name="cargo" value="{{ old('cargo') }}">
               @error('cargo')<span class="err">{{ $message }}</span>@enderror
             </div>
-            <div class="field col-2">
-              <label for="mensagem">Mensagem (opcional)</label>
-              <textarea id="mensagem" name="mensagem">{{ old('mensagem') }}</textarea>
-              @error('mensagem')<span class="err">{{ $message }}</span>@enderror
-            </div>
             {{-- Honeypot anti-spam. Obs.: o nome "website" costuma sofrer autofill do
                  navegador/gerenciador de senhas e disparar o anti-spam à toa. Se o form
                  redirecionar sozinho sem salvar, renomeie este campo para "lp_hp" aqui
@@ -733,6 +760,11 @@
 
   {{-- ============ 12. FOOTER ============ --}}
   <footer class="footer">
+    <div class="wrap">
+      <div class="sec-cta" style="margin-top:0;margin-bottom:38px">
+        <a href="#form" class="btn btn--cyan">Garantir minha vaga <span class="arrow">→</span></a>
+      </div>
+    </div>
     <div class="wrap footer__inner">
       <div class="footer__brand">
         <div class="footer__brands">
