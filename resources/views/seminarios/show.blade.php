@@ -12,6 +12,7 @@
   Mudanças desta versão:
    • Cada dobra (seção) contém um CTA que leva ao formulário (#form).
    • Formulário sem o campo "Mensagem".
+   • Campo WhatsApp agora é OBRIGATÓRIO e com máscara (99) 99999-9999.
   ============================================================
 --}}
 
@@ -727,8 +728,9 @@
               @error('email')<span class="err">{{ $message }}</span>@enderror
             </div>
             <div class="field">
-              <label for="telefone">WhatsApp / Telefone</label>
-              <input type="text" id="telefone" name="telefone" value="{{ old('telefone') }}" placeholder="(11) 90000-0000">
+              <label for="telefone">WhatsApp *</label>
+              <input type="text" id="telefone" name="telefone" value="{{ old('telefone') }}"
+                     placeholder="(11) 90000-0000" inputmode="tel" maxlength="15" required>
               @error('telefone')<span class="err">{{ $message }}</span>@enderror
             </div>
             <div class="field">
@@ -785,5 +787,29 @@
       </p>
     </div>
   </footer>
+
+  {{-- ============ MÁSCARA DO WHATSAPP ============ --}}
+  {{-- Formata o campo #telefone para (99) 99999-9999 enquanto o usuário digita.
+       JS puro, sem dependências. --}}
+  <script>
+    (function () {
+      var tel = document.getElementById('telefone');
+      if (!tel) return;
+
+      function mascaraWhats(valor) {
+        valor = valor.replace(/\D/g, '').slice(0, 11);   // só dígitos, máx. 11
+        valor = valor.replace(/(\d{2})(\d)/, '($1) $2');  // DDD → (99) 9
+        valor = valor.replace(/(\d{5})(\d)/, '$1-$2');    // separa o número → 99999-9999
+        return valor;
+      }
+
+      tel.addEventListener('input', function () {
+        this.value = mascaraWhats(this.value);
+      });
+
+      // Reaplica caso o formulário volte preenchido (old() após erro de validação)
+      tel.value = mascaraWhats(tel.value);
+    })();
+  </script>
 
 @endsection
