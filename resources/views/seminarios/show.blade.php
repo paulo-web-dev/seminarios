@@ -10,6 +10,9 @@
   os nomes dos arquivos para os que você realmente tem.
 
   Mudanças desta versão:
+   • Corpo docente atualizado para os 7 professores atuais
+     (Max Müller, Michelle, Eduardo, Filipi, Giovani, Helio, Ana Paula).
+   • Grid de docentes ajustado para 7 cards (4 colunas em telas grandes).
    • Cada dobra (seção) contém um CTA que leva ao formulário (#form).
    • Formulário sem o campo "Mensagem".
    • Campo WhatsApp agora é OBRIGATÓRIO e com máscara (99) 99999-9999.
@@ -514,7 +517,7 @@
     <style>
       .docentes .doc-grid{display:grid;gap:20px;grid-template-columns:repeat(2,1fr);margin-top:46px}
       @media(min-width:680px){.docentes .doc-grid{grid-template-columns:repeat(3,1fr)}}
-      @media(min-width:1024px){.docentes .doc-grid{grid-template-columns:repeat(5,1fr);gap:16px}}
+      @media(min-width:1024px){.docentes .doc-grid{grid-template-columns:repeat(4,1fr);gap:16px}}
       .docentes .doc-card{position:relative;display:flex;flex-direction:column;background:rgba(255,255,255,.04);
         border:1px solid rgba(0,194,255,.16);border-radius:16px;overflow:hidden;
         transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease}
@@ -553,16 +556,16 @@
         <article class="doc-card">
           <div class="doc-card__media">
             <span class="doc-card__idx">01</span>
-            <img src="{{ asset('img/seminarios/govsocial/doc-jasson.jpg') }}" alt="Jasson Goulart" loading="lazy">
+            <img src="{{ asset('img/seminarios/govsocial/doc-max.jpg') }}" alt="Max Müller Cândido" loading="lazy">
             <div class="doc-card__name">
-              <h3>Jasson Goulart</h3>
-              <span class="doc-card__role">Comunicação &amp; Mídia</span>
+              <h3>Max Müller Cândido</h3>
+              <span class="doc-card__role">Comunicação &amp; Licitações</span>
             </div>
           </div>
           <div class="doc-card__body">
-            <p class="doc-q">Mais de 30 anos comunicando com o público de Curitiba</p>
-            <p class="doc-q">Vivência de TV, rádio e comunicação popular</p>
-            <p class="doc-q">Escuta ativa e linguagem que aproxima instituição e cidadão</p>
+            <p class="doc-q">Professor, comunicador e articulista</p>
+            <p class="doc-q">Consultor em licitações e contratos de comunicação</p>
+            <p class="doc-q">Especializado em comunicação pública</p>
           </div>
         </article>
 
@@ -585,22 +588,38 @@
         <article class="doc-card">
           <div class="doc-card__media">
             <span class="doc-card__idx">03</span>
-            <img src="{{ asset('img/seminarios/govsocial/doc-cassio.jpg') }}" alt="Cassio Ferreira" loading="lazy">
+            <img src="{{ asset('img/seminarios/govsocial/doc-eduardo.jpg') }}" alt="Eduardo Yokomizo" loading="lazy">
             <div class="doc-card__name">
-              <h3>Cassio Ferreira</h3>
-              <span class="doc-card__role">Branding &amp; Estratégia</span>
+              <h3>Eduardo Yokomizo</h3>
+              <span class="doc-card__role">Comunicação Política</span>
             </div>
           </div>
           <div class="doc-card__body">
-            <p class="doc-q">Ex-Diretor de Comunicação Digital da Prefeitura de Curitiba</p>
-            <p class="doc-q">+600% de audiência e 30 milhões de impressões/mês na gestão pública</p>
-            <p class="doc-q">Fundador do Busão Curitiba (700 mil+ seguidores)</p>
+            <p class="doc-q">30 anos de experiência em comunicação</p>
+            <p class="doc-q">Consultor político e redator publicitário</p>
+            <p class="doc-q">Especialista em campanhas eleitorais e redes sociais</p>
           </div>
         </article>
 
         <article class="doc-card">
           <div class="doc-card__media">
             <span class="doc-card__idx">04</span>
+            <img src="{{ asset('img/seminarios/govsocial/doc-filipi.jpg') }}" alt="Filipi Oliveira" loading="lazy">
+            <div class="doc-card__name">
+              <h3>Filipi Oliveira</h3>
+              <span class="doc-card__role">Marketing &amp; Comunicação 360º</span>
+            </div>
+          </div>
+          <div class="doc-card__body">
+            <p class="doc-q">Gestor de comunicação e marketing 360º com foco em resultados</p>
+            <p class="doc-q">Posicionamento e assessoria de comunicação</p>
+            <p class="doc-q">Palestras e treinamentos para equipes</p>
+          </div>
+        </article>
+
+        <article class="doc-card">
+          <div class="doc-card__media">
+            <span class="doc-card__idx">05</span>
             <img src="{{ asset('img/seminarios/govsocial/doc-giovani.jpg') }}" alt="Giovani de Capri" loading="lazy">
             <div class="doc-card__name">
               <h3>Giovani de Capri</h3>
@@ -616,17 +635,33 @@
 
         <article class="doc-card">
           <div class="doc-card__media">
-            <span class="doc-card__idx">05</span>
-            <img src="{{ asset('img/seminarios/govsocial/doc-mayara.jpg') }}" alt="Mayara Pastor" loading="lazy">
+            <span class="doc-card__idx">06</span>
+            <img src="{{ asset('img/seminarios/govsocial/doc-helio.jpg') }}" alt="Helio Abreu" loading="lazy">
             <div class="doc-card__name">
-              <h3>Mayara Pastor</h3>
-              <span class="doc-card__role">LGPD &amp; Proteção de Dados</span>
+              <h3>Helio Abreu</h3>
+              <span class="doc-card__role">Direito Digital &amp; Privacidade</span>
             </div>
           </div>
           <div class="doc-card__body">
-            <p class="doc-q">Advogada e especialista em LGPD (ESMAFE-PR)</p>
-            <p class="doc-q">Lead Implementer ISO/IEC 27701 e membro do Comitê ABNT</p>
-            <p class="doc-q">Compliance, relatórios de impacto e governança de privacidade</p>
+            <p class="doc-q">Advogado com 16 anos em Direito Digital e Proteção de Dados</p>
+            <p class="doc-q">Professor de pós-graduação (FIEP/PR, Positivo e Uninter)</p>
+            <p class="doc-q">Certificações EXIN em Privacy and Data Protection</p>
+          </div>
+        </article>
+
+        <article class="doc-card">
+          <div class="doc-card__media">
+            <span class="doc-card__idx">07</span>
+            <img src="{{ asset('img/seminarios/govsocial/doc-anapaula.jpg') }}" alt="Ana Paula Damázio" loading="lazy">
+            <div class="doc-card__name">
+              <h3>Ana Paula Damázio</h3>
+              <span class="doc-card__role">Jornalismo &amp; Comunicação</span>
+            </div>
+          </div>
+          <div class="doc-card__body">
+            <p class="doc-q">Jornalista com 15 anos em telejornalismo (RIC, RBS, SBT e Band)</p>
+            <p class="doc-q">Mestre em Comunicação e Consumo (ESPM) e assessoria política</p>
+            <p class="doc-q">Secretária de Comunicação de Araquari e CEO de agência</p>
           </div>
         </article>
 
