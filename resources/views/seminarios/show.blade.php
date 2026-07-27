@@ -76,7 +76,7 @@
     <div class="hero__stats">
       <div class="wrap hero__stats-inner">
         <div class="stat"><span class="stat__num">4</span><span class="stat__lbl">Dias de imersão</span></div>
-        <div class="stat"><span class="stat__num">6</span><span class="stat__lbl">Painéis temáticos</span></div>
+        <div class="stat"><span class="stat__num">7</span><span class="stat__lbl">Painéis temáticos</span></div>
         <div class="stat"><span class="stat__num">∞</span><span class="stat__lbl">Networking</span></div>
         <div class="stat"><span class="stat__num">♪</span><span class="stat__lbl">Música ao vivo</span></div>
       </div>
@@ -283,18 +283,18 @@
     <div class="wrap">
       <div class="sec-head">
         <span class="kicker">Programação</span>
-        <h2>Seis painéis, do operacional ao estratégico</h2>
-        <p>De 18 a 21 de agosto de 2026 — quatro dias com a jornada completa: operação, conteúdo, publicidade, LGPD e estratégia.</p>
+        <h2>A ementa, professor por professor</h2>
+        <p>De 18 a 21 de agosto de 2026 — sete especialistas conduzem a jornada completa: da operação de redes e cobertura de eventos à publicidade, LGPD, oratória e sobrevivência digital.</p>
       </div>
       <div class="prog-days">
 
         <div class="day-group">
-          <div class="day-group__label"><span>Ter · 18/08</span></div>
+          <div class="day-group__label"><span>01</span></div>
           <div class="day-group__panels">
             <article class="panel">
               <div class="panel__head">
-                <h3>Abertura · O dia a dia das mídias sociais no setor público sob a LGPD</h3>
-                <span class="panel__time">14h às 17h</span>
+                <h3>Abertura · O Dia a Dia das Mídias Sociais no Setor Público</h3>
+                <span class="panel__time">Michelle Stival</span>
               </div>
               <ul class="panel__topics">
                 <li>Como a proteção de dados transforma as rotinas de publicação, engajamento e monitoramento governamental.</li>
@@ -305,26 +305,12 @@
         </div>
 
         <div class="day-group">
-          <div class="day-group__label"><span>Qua · 19/08</span></div>
+          <div class="day-group__label"><span>02</span></div>
           <div class="day-group__panels">
             <article class="panel">
               <div class="panel__head">
-                <h3>Gestão de plataformas, acessos e anúncios</h3>
-                <span class="panel__time">9h às 12h</span>
-              </div>
-              <ul class="panel__topics">
-                <li>Configuração segura e operação de tráfego pago na publicidade institucional.</li>
-                <li>Gerenciamento de acessos (Meta Business Suite, Google Ads): níveis de permissão e segurança de contas.</li>
-                <li>Pixels e APIs de conversão em portais públicos: limites da coleta de dados comportamentais.</li>
-                <li>Segmentação de público em campanhas pagas: uso ético de listas de e-mails, telefones e lookalike.</li>
-                <li>Termos de uso das plataformas vs. LGPD: o que aceitar e configurar nas ferramentas.</li>
-                <li>Relatórios de performance e exportação de leads: armazenamento seguro de planilhas e métricas.</li>
-              </ul>
-            </article>
-            <article class="panel">
-              <div class="panel__head">
-                <h3>Rotina de produção de conteúdo e cobertura de eventos</h3>
-                <span class="panel__time">14h às 17h</span>
+                <h3>Rotina de Produção de Conteúdo e Cobertura de Eventos</h3>
+                <span class="panel__time">Ana Paula Damázio</span>
               </div>
               <ul class="panel__topics">
                 <li>Execução prática de captura, edição e publicação de imagens e dados.</li>
@@ -339,12 +325,53 @@
         </div>
 
         <div class="day-group">
-          <div class="day-group__label"><span>Qui · 20/08</span></div>
+          <div class="day-group__label"><span>03</span></div>
           <div class="day-group__panels">
             <article class="panel">
               <div class="panel__head">
-                <h3>Atendimento direto e moderação de comunidades</h3>
-                <span class="panel__time">9h às 12h</span>
+                <h3>Contratar para Comunicar &amp; Impulsionamento de Conteúdo em Redes Sociais</h3>
+                <span class="panel__time">Max Müller Cândido</span>
+              </div>
+              <ul class="panel__topics">
+                <li><strong>Contratar para Comunicar:</strong> contratações diretas para fortalecer as redes sociais da Administração Pública.</li>
+                <li><strong>Impulsionamento de conteúdo em redes sociais:</strong> quando a inexigibilidade pode ser o caminho mais adequado?</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+
+        <div class="day-group">
+          <div class="day-group__label"><span>04</span></div>
+          <div class="day-group__panels">
+            <article class="panel">
+              <div class="panel__head">
+                <h3>LGPD na Comunicação Pública</h3>
+                <span class="panel__time">Helio Abreu</span>
+              </div>
+              <ul class="panel__topics">
+                <li>Abertura — contexto e relevância da LGPD no setor público.</li>
+                <li>O que é a LGPD — Lei 13.709/2018, fundamentos e bases legais.</li>
+                <li>Princípios aplicáveis — finalidade, adequação, necessidade e transparência.</li>
+                <li>Bases legais no setor público — consentimento, obrigação legal e execução de políticas públicas.</li>
+                <li>Direitos dos titulares — acesso, correção, exclusão e portabilidade.</li>
+                <li>Cuidados na publicação — imagens, dados pessoais e informações de cidadãos.</li>
+                <li>Papel do DPO e da ANPD.</li>
+                <li>Sanções e riscos — multas, advertências e bloqueio de dados.</li>
+                <li>Boas práticas — políticas de privacidade, avisos de coleta e prazos de retenção.</li>
+                <li>Casos práticos — exemplos reais no contexto de mídias sociais públicas.</li>
+                <li>Plano de ação — checklist de conformidade.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+
+        <div class="day-group">
+          <div class="day-group__label"><span>05</span></div>
+          <div class="day-group__panels">
+            <article class="panel">
+              <div class="panel__head">
+                <h3>Atendimento Direto e Moderação de Comunidades</h3>
+                <span class="panel__time">Filipi Oliveira</span>
               </div>
               <ul class="panel__topics">
                 <li>Operação de SAC digital, respostas e moderação de comentários.</li>
@@ -355,34 +382,40 @@
                 <li>Automatização e chatbots: regras de LGPD para fluxos automáticos de respostas.</li>
               </ul>
             </article>
+          </div>
+        </div>
+
+        <div class="day-group">
+          <div class="day-group__label"><span>06</span></div>
+          <div class="day-group__panels">
             <article class="panel">
               <div class="panel__head">
-                <h3>Gestão de crises, incidentes e ferramentas de terceiros</h3>
-                <span class="panel__time">14h às 17h</span>
+                <h3>Oratória para o Comunicador Público</h3>
+                <span class="panel__time">Giovani de Capri</span>
               </div>
               <ul class="panel__topics">
-                <li>Monitoramento de menções, uso de softwares de agendamento e segurança.</li>
-                <li>Configuração segura de plataformas de agendamento e monitoramento (mLabs, Buzzmonitor, Sprinklr).</li>
-                <li>Monitoramento de termos e social listening: limites da coleta de postagens públicas de cidadãos.</li>
-                <li>Protocolo &ldquo;perfil hackeado&rdquo; ou &ldquo;vazamento de dados&rdquo;: passos imediatos para conter o incidente.</li>
-                <li>Links encurtados, QR Codes e landing pages: auditoria de segurança antes do lançamento.</li>
-                <li>Checklist de conformidade: auditoria semanal das configurações de privacidade das contas oficiais.</li>
+                <li>Ementa em definição — em breve os detalhes deste painel de oratória e comunicação com autoridade.</li>
               </ul>
             </article>
           </div>
         </div>
 
         <div class="day-group">
-          <div class="day-group__label"><span>Sex · 21/08</span></div>
+          <div class="day-group__label"><span>07</span></div>
           <div class="day-group__panels">
             <article class="panel">
               <div class="panel__head">
-                <h3>Encerramento · Workshop: Manual Prático de Sobrevivência Digital</h3>
-                <span class="panel__time">9h às 11h</span>
+                <h3>Encerramento · Práticas de Sobrevivência Digital para o Comunicador Público</h3>
+                <span class="panel__time">Eduardo Yokomizo</span>
               </div>
               <ul class="panel__topics">
-                <li>Manual prático de sobrevivência digital para o comunicador público — guia de bolso operacional para equipes de comunicação governamental.</li>
-                <li>Estudo de casos reais de erros operacionais nas redes, debate com os agentes e encerramento.</li>
+                <li><strong>Introdução:</strong> a nova realidade da comunicação pública — economia da atenção, reputação e os impactos da Inteligência Artificial.</li>
+                <li><strong>Missão 1 · Conquistar Atenção:</strong> o excesso de informação e a diferença entre competência invisível e competência percebida.</li>
+                <li><strong>Missão 2 · Construir Confiança:</strong> clareza, linguagem cidadã e construção de reputação antes das crises.</li>
+                <li><strong>Missão 3 · Controlar a Narrativa:</strong> comunicação proativa, dados com significado e ocupação da narrativa na crise.</li>
+                <li><strong>Missão 4 · Criar Proximidade:</strong> humanização, autenticidade, bastidores e escuta ativa.</li>
+                <li><strong>Missão 5 · Evoluir Antes que o Mundo Obrigue:</strong> IA, deepfakes, reputação digital e aprendizagem contínua.</li>
+                <li><strong>Encerramento:</strong> Manifesto da Sobrevivência Digital e as 10 Leis da Sobrevivência Digital.</li>
               </ul>
             </article>
           </div>
