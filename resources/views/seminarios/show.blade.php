@@ -2,20 +2,36 @@
 
 {{--
   ============================================================
-  GovSocial — Landing 100% ESTÁTICA
+  GovSocial — Landing 100% ESTÁTICA (conteúdo) + RASTREAMENTO META
   Todo o conteúdo está chumbado direto aqui no HTML.
   Para editar: mude os textos/preços direto nas tags abaixo.
   (Não depende mais de $seminario nem do banco.)
   Imagens apontam para public/img/seminarios/govsocial/ — ajuste
   os nomes dos arquivos para os que você realmente tem.
 
-  Mudanças desta versão:
-   • Corpo docente atualizado para os 7 professores atuais
-     (Max Müller, Michelle, Eduardo, Filipi, Giovani, Helio, Ana Paula).
+  Mudanças desta versão (rastreamento):
+   • Meta Pixel BASE (init + PageView) NÃO fica neste arquivo:
+     fica no <head> do layout (layouts.seminario), assim vale para
+     TODA página da LP de uma vez. Em Blade a herança de layout não
+     deduplica scripts como o Next.js, então uma vez só já resolve.
+   • O formulário continua com POST nativo do Laravel (com @csrf e
+     validação). A LP não é "estática" para efeito de envio porque o
+     form passa pela rota govsocial.inscricao — então mantemos o
+     servidor e NÃO convertemos para fetch/webhook.
+   • As 6 UTMs (utm_source/medium/campaign/id/term/content) + fbclid
+     vão como campos ocultos, preenchidos por JS a partir de
+     window.location.search NO MOMENTO do submit (sem cookie/localStorage).
+   • Identificador próprio da LP no payload: campo "lp_form_id".
+   • No SUCESSO, o controller deve redirecionar para
+     route('govsocial.obrigado') SEM PII na URL — é lá que o Pixel
+     dispara o evento Lead (ver govsocial-obrigado.blade.php).
+
+  Mudanças da versão anterior:
+   • Corpo docente atualizado para os 7 professores atuais.
    • Grid de docentes ajustado para 7 cards (4 colunas em telas grandes).
    • Cada dobra (seção) contém um CTA que leva ao formulário (#form).
    • Formulário sem o campo "Mensagem".
-   • Campo WhatsApp agora é OBRIGATÓRIO e com máscara (99) 99999-9999.
+   • Campo WhatsApp OBRIGATÓRIO e com máscara (99) 99999-9999.
   ============================================================
 --}}
 
@@ -781,9 +797,37 @@
         <h3>Fale com um consultor</h3>
         <p class="form-sub">Preencha os dados e nossa equipe entra em contato para garantir sua vaga.</p>
 
-        {{-- AJUSTE o action abaixo para o endpoint que recebe a inscrição --}}
-        <form method="POST" action="{{ route('govsocial.inscricao') }}">
+        {{-- AJUSTE o action abaixo para o endpoint que recebe a inscrição.
+             O POST continua NATIVO do Laravel (com @csrf e validação): a LP
+             não é "estática" para efeito de envio porque o form passa pela rota
+             govsocial.inscricao, então mantemos o servidor — não convertemos
+             para fetch/webhook.
+             No SUCESSO, o controller deve redirecionar para
+             route('govsocial.obrigado') SEM PII na query string — é lá que o
+             Pixel dispara o evento Lead. Ex. no StoreLeadController:
+                 return redirect()->route('govsocial.obrigado');
+             Em erro de validação, o Laravel já volta para cá com os erros
+             (@error) — o usuário nunca fica travado numa tela de erro. --}}
+        <form id="form-inscricao" method="POST" action="{{ route('govsocial.inscricao') }}">
           @csrf
+
+          {{-- Identificador desta LP para o CRM/automação saber a ORIGEM do lead.
+               Se seu CRM espera outro nome de campo, renomeie "lp_form_id". --}}
+          <input type="hidden" name="lp_form_id" value="lp-govsocial">
+
+          {{-- As 6 UTMs + fbclid. Ficam VAZIAS no HTML e são preenchidas por JS
+               a partir de window.location.search NO MOMENTO do submit
+               (ver script "UTMs" no fim do arquivo). Vão como campos separados,
+               sem concatenar, para o CRM filtrar/reportar por campanha. --}}
+          <input type="hidden" name="utm_source"   id="utm_source">
+          <input type="hidden" name="utm_medium"   id="utm_medium">
+          <input type="hidden" name="utm_campaign" id="utm_campaign">
+          <input type="hidden" name="utm_id"       id="utm_id">
+          <input type="hidden" name="utm_term"     id="utm_term">
+          <input type="hidden" name="utm_content"  id="utm_content">
+          {{-- fbclid é opcional; útil para o matching do Meta / CAPI --}}
+          <input type="hidden" name="fbclid"       id="fbclid">
+
           <div class="form-grid">
             <div class="field col-2">
               <label for="nome">Nome completo *</label>
@@ -877,6 +921,30 @@
 
       // Reaplica caso o formulário volte preenchido (old() após erro de validação)
       tel.value = mascaraWhats(tel.value);
+    })();
+  </script>
+
+  {{-- ============ UTMs → CAMPOS OCULTOS DO FORM ============ --}}
+  {{-- Lê as 6 UTMs (+ fbclid) de window.location.search NO MOMENTO do submit
+       e preenche os inputs ocultos. Sem cookie, sem localStorage, sem persistência.
+       Requisito: a query string precisa CHEGAR viva até aqui — nunca faça um
+       redirect (ex.: "/" → "/govsocial") que descarte ?utm_...&fbclid no caminho,
+       senão as UTMs e o fbclid somem antes do form rodar. --}}
+  <script>
+    (function () {
+      var form = document.getElementById('form-inscricao');
+      if (!form) return;
+
+      var CAMPOS = ['utm_source','utm_medium','utm_campaign','utm_id','utm_term','utm_content','fbclid'];
+
+      form.addEventListener('submit', function () {
+        var params = new URLSearchParams(window.location.search);
+        CAMPOS.forEach(function (chave) {
+          var input = document.getElementById(chave);
+          if (input) input.value = params.get(chave) || '';
+        });
+        // Sem preventDefault: o POST nativo do Laravel segue com os campos já preenchidos.
+      });
     })();
   </script>
 
