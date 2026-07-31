@@ -899,7 +899,11 @@
       </p>
     </div>
   </footer>
+  2. @push('scripts') ou direto no body):
 
+  <script>
+  fbq('track', 'Lead');
+  </script>
   {{-- ============ MÁSCARA DO WHATSAPP ============ --}}
   {{-- Formata o campo #telefone para (99) 99999-9999 enquanto o usuário digita.
        JS puro, sem dependências. --}}

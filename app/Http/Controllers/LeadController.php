@@ -14,7 +14,9 @@ class LeadController extends Controller
      */
     public function store(StoreLeadRequest $request)
     {
-        $seminario = $this->seminario();
+        // Slug do seminário vem do campo oculto da LP (fallback: GovSocial).
+        $slug = (string) ($request->input('seminario_slug') ?: 'gestao-midias-sociais-setor-publico');
+        $seminario = $this->resolveSeminario($slug);
 
         // UTMs: do request (hidden) ou da sessão (capturadas no acesso à LP)
         $utmSessao = session('utm', []);
@@ -73,13 +75,36 @@ class LeadController extends Controller
         EnviarLeadWebhook::dispatchAfterResponse($payload);
 
         return redirect()
-            ->route('govsocial.obrigado')
+            ->route($this->obrigadoRoute($slug))
             ->with('lead_nome', $lead->nome);
     }
 
-    public function obrigado()
+    /**
+     * Página de obrigado. Descobre o seminário pela rota chamada
+     * (govsocial.obrigado ou financas.obrigado) e mostra a view correspondente.
+     */
+    public function obrigado(\Illuminate\Http\Request $request)
     {
-        $seminario = $this->seminario();
+        $rota = optional($request->route())->getName();
+
+        // financas → view/paleta dourada; qualquer outra → GovSocial (comportamento original).
+        if ($rota === 'financas.obrigado') {
+            $seminario  = Seminario::where('slug', 'financas-municipais')->first();
+            $paletaOuro = [
+                'primary' => '#7A5518', 'primary900' => '#1A1207',
+                'secondary' => '#F2A016', 'secondary600' => '#DF7C0B',
+                'accent' => '#E1913A', 'dark' => '#141109',
+                'light' => '#F6EEE1', 'text' => '#241B0E', 'muted' => '#8A7B62',
+            ];
+
+            return view('seminarios.financas-obrigado', [
+                'seminario' => $seminario,
+                'paleta'    => $seminario ? $seminario->paleta() : $paletaOuro,
+                'nome'      => session('lead_nome'),
+            ]);
+        }
+
+        $seminario = $this->resolveSeminario('gestao-midias-sociais-setor-publico');
 
         return view('seminarios.obrigado', [
             'seminario' => $seminario,
@@ -89,12 +114,22 @@ class LeadController extends Controller
     }
 
     /**
-     * Resolve o seminário GovSocial (por slug) com fallback no mais recente.
+     * Resolve um seminário por slug, com fallback no mais recente.
      */
-    private function seminario(): Seminario
+    private function resolveSeminario(string $slug): Seminario
     {
-        return Seminario::where('slug', 'gestao-midias-sociais-setor-publico')->first()
+        return Seminario::where('slug', $slug)->first()
             ?? Seminario::query()->latest()->firstOrFail();
+    }
+
+    /**
+     * Mapeia o slug do seminário para a rota de "obrigado" correspondente.
+     */
+    private function obrigadoRoute(string $slug): string
+    {
+        return [
+            'financas-municipais' => 'financas.obrigado',
+        ][$slug] ?? 'govsocial.obrigado';
     }
 
     private function dispositivo(?string $ua): string

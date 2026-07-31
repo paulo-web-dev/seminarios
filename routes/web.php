@@ -20,6 +20,15 @@ Route::get('/govsocial', [SeminarioController::class, 'govsocial'])->name('govso
 Route::post('/govsocial/inscricao', [LeadController::class, 'store'])->name('govsocial.inscricao');
 Route::get('/govsocial/obrigado', [LeadController::class, 'obrigado'])->name('govsocial.obrigado');
 
+/*
+|--------------------------------------------------------------------------
+| Landing Finanças Municipais
+|--------------------------------------------------------------------------
+*/
+Route::get('/financas-municipais', [SeminarioController::class, 'financas'])->name('financas');
+Route::post('/financas-municipais/inscricao', [LeadController::class, 'store'])->name('financas.inscricao');
+Route::get('/financas-municipais/obrigado', [LeadController::class, 'obrigado'])->name('financas.obrigado');
+
 Route::get('/', fn () => redirect()->route('govsocial'))->name('home');
 Route::redirect('/seminarios/gestao-midias-sociais-setor-publico', '/govsocial');
 
