@@ -3,6 +3,26 @@
 @section('title', 'Seminário Finanças Municipais · Tesouraria e Contabilidade · 20 a 23 de outubro · Curitiba')
 @section('description', 'Imersão presencial de quatro dias em finanças municipais: tesouraria, contabilidade, arrecadação, conciliação bancária, tecnologia e Reforma Tributária. 20 a 23 de outubro de 2026, no Centro de Curitiba. Realização Unyflex.')
 
+
+@push('head')
+  {{-- ============ META PIXEL (base: init + PageView) ============
+       Injetado no <head> do layout via @stack('head'). Carrega nesta LP.
+       O evento "Lead" (conversão) NÃO fica aqui — fica na página de obrigado. --}}
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1168799437651546');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1168799437651546&ev=PageView&noscript=1"/></noscript>
+  <!-- End Meta Pixel Code -->
+@endpush
+
 @section('body')
 
   <style>
@@ -338,7 +358,7 @@
             <article class="panel">
               <div class="panel__head">
                 <h3>Tecnologia e Inovação no Setor Financeiro</h3>
-                <span class="panel__time">Marcelo Zimmar · 14h–17h</span>
+                <span class="panel__time">Marcelo Zimmer · 14h–17h</span>
               </div>
               <ul class="panel__topics">
                 <li>Inteligência Artificial aplicada: automação amiga e combate ao retrabalho.</li>
@@ -357,7 +377,7 @@
             <article class="panel">
               <div class="panel__head">
                 <h3>Encerramento · Soft Skills e Orientações Estratégicas</h3>
-                <span class="panel__time">Eder Paz · 09h–11h</span>
+                <span class="panel__time">Éderson Paz · 09h–11h</span>
               </div>
               <ul class="panel__topics">
                 <li>O perfil dos novos operadores: de executor a analista de dados.</li>
@@ -435,7 +455,7 @@
       <div class="quote">
         <span class="quote__mark">“</span>
         <blockquote>Saí com checklists prontos e um plano para reorganizar a tesouraria e a conciliação da prefeitura. Valeu cada minuto.</blockquote>
-        <cite>— Participante de edição anterior, Secretaria de Finanças Municipal</cite>
+        — Participante de edição anterior, Secretaria de Finanças Municipal
       </div>
       <div class="sec-cta">
         <a href="#form" class="btn btn--cyan">Quero fazer parte da próxima edição <span class="arrow">→</span></a>
@@ -541,9 +561,9 @@
         <article class="doc-card">
           <div class="doc-card__media">
             <span class="doc-card__idx">04</span>
-            <img src="{{ asset('img/seminarios/financas/doc-marcelo.jpg') }}" alt="Marcelo Zimmar" loading="lazy">
+            <img src="{{ asset('img/seminarios/financas/doc-marcelo.jpg') }}" alt="Marcelo Zimmer" loading="lazy">
             <div class="doc-card__name">
-              <h3>Marcelo Zimmar</h3>
+              <h3>Marcelo Zimmer</h3>
               <span class="doc-card__role">Tecnologia &amp; Inovação</span>
             </div>
           </div>
@@ -557,9 +577,9 @@
         <article class="doc-card">
           <div class="doc-card__media">
             <span class="doc-card__idx">05</span>
-            <img src="{{ asset('img/seminarios/financas/doc-eder.jpg') }}" alt="Eder Paz" loading="lazy">
+            <img src="{{ asset('img/seminarios/financas/doc-eder.jpg') }}" alt="Éderson Paz" loading="lazy">
             <div class="doc-card__name">
-              <h3>Eder Paz</h3>
+              <h3>Éderson Paz</h3>
               <span class="doc-card__role">Soft Skills &amp; Estratégia</span>
             </div>
           </div>
@@ -753,20 +773,20 @@
     })();
   </script>
 
-  {{-- ============ UTMs → CAMPOS OCULTOS DO FORM ============ --}}
-  <script>
-    (function () {
-      var form = document.getElementById('form-inscricao');
-      if (!form) return;
-      var CAMPOS = ['utm_source','utm_medium','utm_campaign','utm_id','utm_term','utm_content','fbclid'];
-      form.addEventListener('submit', function () {
-        var params = new URLSearchParams(window.location.search);
-        CAMPOS.forEach(function (chave) {
-          var input = document.getElementById(chave);
-          if (input) input.value = params.get(chave) || '';
-        });
+{{-- ============ UTMs → CAMPOS OCULTOS DO FORM ============ --}}
+<script>
+  (function () {
+    var form = document.getElementById('form-inscricao');
+    if (!form) return;
+    var CAMPOS = ['utm_source','utm_medium','utm_campaign','utm_id','utm_term','utm_content','fbclid'];
+    form.addEventListener('submit', function () {
+      var params = new URLSearchParams(window.location.search);
+      CAMPOS.forEach(function (chave) {
+        var input = document.getElementById(chave);
+        if (input) input.value = params.get(chave) || '';
       });
-    })();
-  </script>
+    });
+  })();
+</script>
 
-@endsection
+@endsection  
