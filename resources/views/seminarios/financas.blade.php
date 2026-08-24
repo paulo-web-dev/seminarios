@@ -266,7 +266,7 @@
           <div class="day-group__label"><span>21/10</span></div>
           <div class="day-group__panels">
             <article class="panel">
-              <div class="panel__head"><h3>Operação Tesouraria — Do Empenho ao Pagamento</h3><span class="panel__time">Marcia Del Valle · 14h–17h</span></div>
+              <div class="panel__head"><h3>Operação Tesouraria — Do Empenho ao Pagamento</h3><span class="panel__time">Marcio Assumpção · 14h–17h</span></div>
               <ul class="panel__topics">
                 <li>Checklists de segurança: o que conferir antes de apertar o botão de “pagar”.</li>
                 <li>Cronograma mensal de desembolso: evitando o sufoco de fim de mês.</li>
@@ -422,8 +422,8 @@
         </article>
         <article class="doc-card">
           <div class="doc-card__media"><span class="doc-card__idx">02</span>
-            <img src="{{ asset('img/seminarios/financas/doc-marcia.jpg') }}" alt="Marcia Del Valle" loading="lazy">
-            <div class="doc-card__name"><h3>Marcia Del Valle</h3><span class="doc-card__role">Tesouraria &amp; Pagamentos</span></div></div>
+            <img src="{{ asset('img/seminarios/financas/doc-marcio.jpg') }}" alt="Marcio Assumpção" loading="lazy">
+            <div class="doc-card__name"><h3>Marcio Assumpção</h3><span class="doc-card__role">Tesouraria &amp; Pagamentos</span></div></div>
           <div class="doc-card__body">
             <p class="doc-q">Operação de tesouraria do empenho ao pagamento</p>
             <p class="doc-q">Restos a pagar e cronograma de desembolso</p>
