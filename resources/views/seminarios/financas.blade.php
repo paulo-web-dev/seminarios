@@ -1,7 +1,7 @@
 @extends('layouts.financas')
 
-@section('title', 'Encerramento de Exercício nas Finanças Públicas · Programação completa + modelo de empenho · Curitiba')
-@section('description', 'Sua tesouraria e sua contabilidade não fecham? Receba a programação completa em PDF + o modelo pronto de justificativa para inscrição via nota de empenho. Imersão presencial, 08 a 11 de dezembro de 2026, em Curitiba.')
+@section('title', 'Seminário Finanças Municipais · Programação completa + modelo de empenho · Curitiba')
+@section('description', 'Sua tesouraria e sua contabilidade não fecham? Receba a programação completa em PDF + o modelo pronto de justificativa para inscrição via nota de empenho. Imersão presencial, 20 a 23 de outubro de 2026, em Curitiba.')
 
 @push('head')
   {{-- ============ META PIXEL (base: init + PageView) ============ --}}
@@ -57,9 +57,9 @@
   <nav class="nav">
     <div class="wrap nav__inner">
       <div class="nav__brand">
-        <img src="{{ asset('img/seminarios/financas/emblem.png') }}" alt="Encerramento de Exercício nas Finanças Públicas" style="height:30px">
+        <img src="{{ asset('img/seminarios/financas/emblem.png') }}" alt="Finanças Municipais" style="height:30px">
         <span class="sep"></span>
-        <span class="tag">Encerramento nas Finanças Públicas</span>
+        <span class="tag">Seminário Finanças Municipais</span>
       </div>
       <a href="#form" class="nav__cta">Receber a programação</a>
     </div>
@@ -69,19 +69,19 @@
   <header class="hero">
     <div class="hero__grid"></div>
     <div class="hero__photo ph">
-      <img src="{{ asset('img/seminarios/financas/img-evento-cheio.jpg') }}" alt="Encerramento de Exercício nas Finanças Públicas">
+      <img src="{{ asset('img/seminarios/financas/img-evento-cheio.jpg') }}" alt="Seminário Finanças Municipais">
     </div>
     <div class="hero__scrim"></div>
     <div class="wrap hero__inner">
-      <span class="badge badge--orange">Imersão presencial · 08 a 11 de dezembro · Vagas limitadas</span>
+      <span class="badge badge--orange">Imersão presencial · 20 a 23 de outubro · Vagas limitadas</span>
 
       <h1>Sua <span class="cy">tesouraria</span> e sua <span class="cy">contabilidade</span> não fecham?</h1>
 
-      <p class="hero__sub">Da tesouraria à prestação de contas — feche o exercício sem riscos</p>
-      <p class="hero__desc">Quatro dias de imersão para encerrar o exercício com segurança em estados, municípios e autarquias — da governança do fechamento à prestação de contas, com restos a pagar, conciliação, limites da LRF e a Reforma Tributária aplicados à realidade do seu órgão.</p>
+      <p class="hero__sub">Sincronização híbrida na Tesouraria e Contabilidade</p>
+      <p class="hero__desc">Quatro dias de imersão para o financeiro municipal bater o caixa com a contabilidade — do empenho ao pagamento, com a Reforma Tributária e a tecnologia aplicadas à realidade da sua prefeitura.</p>
 
       <p class="hero__event">
-        <span>08 a 11/12</span><span class="sep"></span><span>Curitiba/PR</span><span class="sep"></span><span>17h de carga horária</span>
+        <span>20/10</span><span class="sep"></span><span>Curitiba/PR</span><span class="sep"></span><span>17h de carga horária</span>
       </p>
 
       <div class="hero__seals">
@@ -108,7 +108,7 @@
     <div class="hero__stats">
       <div class="wrap hero__stats-inner">
         <div class="stat"><span class="stat__num">4</span><span class="stat__lbl">Dias de imersão</span></div>
-        <div class="stat"><span class="stat__num">8</span><span class="stat__lbl">Painéis temáticos</span></div>
+        <div class="stat"><span class="stat__num">6</span><span class="stat__lbl">Painéis temáticos</span></div>
         <div class="stat"><span class="stat__num">5</span><span class="stat__lbl">Especialistas</span></div>
         <div class="stat"><span class="stat__num">✓</span><span class="stat__lbl">Certificado MEC</span></div>
       </div>
@@ -120,24 +120,24 @@
     <div class="wrap">
       <div class="sec-head">
         <span class="kicker">Por que participar</span>
-        <h2>Uma imersão pensada para o fechamento do exercício</h2>
-        <p>Tesouraria, contabilidade e controle falando a mesma língua na hora de fechar o ano. Aqui você aprende a encerrar o exercício com segurança, eficiência e conformidade — da governança do fechamento à prestação de contas — em estados, municípios e autarquias.</p>
+        <h2>Uma imersão pensada para a realidade do financeiro municipal</h2>
+        <p>Tesouraria, contabilidade e arrecadação falando a mesma língua. Aqui você aprende a operar as finanças do município com segurança, eficiência e conformidade — do empenho ao pagamento.</p>
       </div>
       <div class="cards3">
         <article class="fcard">
           <div class="fcard__icon">@includeIf('seminarios.icons.chart', ['size' => 26])</div>
-          <h3>Governança do fechamento</h3>
-          <p>Calendário de encerramento, ato/decreto, inventário patrimonial e almoxarifado, e o cronograma de empenho, liquidação e ordens de pagamento.</p>
+          <h3>Do empenho ao pagamento</h3>
+          <p>Operação de tesouraria com checklists de segurança, cronograma de desembolso e gestão de restos a pagar, prontos para auditorias e Tribunais de Contas.</p>
         </article>
         <article class="fcard">
           <div class="fcard__icon">@includeIf('seminarios.icons.target', ['size' => 26])</div>
-          <h3>Restos a pagar e limites da LRF</h3>
-          <p>RPP e RPNP, cancelamento de saldos, suficiência de caixa, Despesa Total com Pessoal e o mecanismo de ajuste fiscal (95% RC vs DS).</p>
+          <h3>Reforma Tributária</h3>
+          <p>O que muda na rotina do financeiro municipal, o impacto nas receitas para 2026 e a governança necessária para a transição.</p>
         </article>
         <article class="fcard">
           <div class="fcard__icon">@includeIf('seminarios.icons.shield-check', ['size' => 26])</div>
-          <h3>Conciliação, TCs e conformidade</h3>
-          <p>Conciliação bancária no fechamento, jurisprudência dos Tribunais de Contas, checklist de conformidade e tecnologia aplicada à virada do ano.</p>
+          <h3>IA e conciliação em tempo real</h3>
+          <p>Automação amiga, dashboards de indicadores, segurança cibernética e conciliação bancária diária para bater o caixa com a contabilidade.</p>
         </article>
       </div>
       <div class="sec-cta">
@@ -153,7 +153,7 @@
       <div class="sec-head">
         <span class="kicker">A Experiência</span>
         <h2>Muito além de uma sala de aula</h2>
-        <p>Quatro dias de conteúdo técnico de alto nível em um ambiente preparado para grandes encontros — com networking entre entes públicos, gastronomia e momentos para celebrar.</p>
+        <p>Quatro dias de conteúdo técnico de alto nível em um ambiente preparado para grandes encontros — com networking entre tesourarias, gastronomia e momentos para celebrar.</p>
       </div>
       <div class="exp-grid">
         <article class="exp-item exp-feature">
@@ -171,7 +171,7 @@
           <div class="exp-item__content">
             <span class="exp-item__icon">@includeIf('seminarios.icons.utensils', ['size' => 22])</span>
             <h3>Almoço com networking</h3>
-            <p>Troque experiências com tesoureiros, contadores e controladores de outros entes públicos.</p>
+            <p>Troque experiências com tesoureiros, contadores e controladores de outras prefeituras.</p>
           </div>
         </article>
         <article class="exp-item exp-card">
@@ -189,7 +189,7 @@
           <div class="exp-item__content">
             <span class="exp-item__icon">@includeIf('seminarios.icons.graduation', ['size' => 22])</span>
             <h3>Tutoria com os especialistas</h3>
-            <p>Acesso direto às referências da área para tirar dúvidas do seu fechamento.</p>
+            <p>Acesso direto às referências da área para tirar dúvidas da sua tesouraria.</p>
           </div>
         </article>
         <article class="exp-item exp-card">
@@ -221,10 +221,10 @@
         <article class="ben"><div class="ben__icon">@includeIf('seminarios.icons.gift', ['size' => 24])</div><h3>Brindes exclusivos</h3><p>Itens personalizados do evento entregues no credenciamento.</p></article>
         <article class="ben"><div class="ben__icon">@includeIf('seminarios.icons.award', ['size' => 24])</div><h3>Certificação reconhecida pelo MEC</h3><p>Certificado emitido pela Faculdade Unypública.</p></article>
         <article class="ben"><div class="ben__icon">@includeIf('seminarios.icons.star', ['size' => 24])</div><h3>Mentoria</h3><p>Acompanhamento dos docentes durante toda a imersão.</p></article>
-        <article class="ben"><div class="ben__icon">@includeIf('seminarios.icons.users-group', ['size' => 24])</div><h3>Docentes especialistas</h3><p>Profissionais com atuação real nas finanças dos entes públicos.</p></article>
+        <article class="ben"><div class="ben__icon">@includeIf('seminarios.icons.users-group', ['size' => 24])</div><h3>Docentes especialistas</h3><p>Profissionais com atuação real nas finanças públicas municipais.</p></article>
         <article class="ben"><div class="ben__icon">@includeIf('seminarios.icons.coffee', ['size' => 24])</div><h3>Coffee break gourmet</h3><p>Pausas com café e gastronomia entre os painéis.</p></article>
         <article class="ben"><div class="ben__icon">@includeIf('seminarios.icons.graduation', ['size' => 24])</div><h3>Um semestre de EAD</h3><p>Acesso a um semestre de ensino a distância na Faculdade Unypública.</p></article>
-        <article class="ben"><div class="ben__icon">@includeIf('seminarios.icons.file', ['size' => 24])</div><h3>Materiais em PDF</h3><p>Apostilas, checklists e templates prontos para o fechamento do exercício.</p></article>
+        <article class="ben"><div class="ben__icon">@includeIf('seminarios.icons.file', ['size' => 24])</div><h3>Materiais em PDF</h3><p>Apostilas, checklists e templates prontos para a rotina do financeiro.</p></article>
         <article class="ben"><div class="ben__icon">@includeIf('seminarios.icons.package', ['size' => 24])</div><h3>Kit personalizado</h3><p>Kit do participante com os materiais do seminário.</p></article>
       </div>
       <div class="sec-cta">
@@ -240,92 +240,79 @@
       <div class="sec-head">
         <span class="kicker">Programação</span>
         <h2>A ementa, painel por painel</h2>
-        <p>De 08 a 11 de dezembro de 2026 — a jornada completa do encerramento: da nova gestão e do calendário de fechamento à tesouraria, restos a pagar, conciliação, limites da LRF e a jurisprudência dos Tribunais de Contas. Dois painéis (LRF e Tribunais de Contas) serão conduzidos por especialistas convidados, em breve anunciados.</p>
+        <p>De 20 a 23 de outubro de 2026 — cinco especialistas conduzem a jornada completa: da nova gestão financeira à tesouraria e conciliação bancária, com tecnologia, segurança e soft skills.</p>
       </div>
       <div class="prog-days">
         <div class="day-group">
-          <div class="day-group__label"><span>08/12</span></div>
-          <div class="day-group__panels">        
+          <div class="day-group__label"><span>20/10</span></div>
+          <div class="day-group__panels">
             <article class="panel">
-              <div class="panel__head"><h3>Abertura · A Nova Gestão das Finanças Públicas e a Reforma Tributária</h3><span class="panel__time">Paulo Feijó · 14h–15h20</span></div>
+              <div class="panel__head"><h3>Abertura · A Nova Gestão Financeira: Desafios e Oportunidades</h3><span class="panel__time">Paulo Feijó · 14h–15h20</span></div>
               <ul class="panel__topics">
-                <li>Panorama econômico e o impacto nas receitas dos entes públicos para 2026.</li>
-                <li>Integração entre Tesouraria, Contabilidade e Tributação.</li>
+                <li>Panorama econômico e o impacto nas receitas municipais para 2026.</li>
+                <li>A transição para a Reforma Tributária: o que muda na rotina do financeiro.</li>
               </ul>
             </article>
             <article class="panel">
-              <div class="panel__head"><h3>Governança e Calendário de Encerramento do Exercício</h3><span class="panel__time">Paulo Feijó · 15h40–17h</span></div>
+              <div class="panel__head"><h3>Integração Multifacetária nas Finanças do Município</h3><span class="panel__time">Paulo Feijó · 15h40–17h</span></div>
               <ul class="panel__topics">
-                <li>Cronograma de fechamento: prazos de empenho, liquidação e ordens de pagamento.</li>
-                <li>Ato/decreto de encerramento do exercício.</li>
-                <li>Inventário patrimonial e almoxarifado.</li>
+                <li>Falar a mesma língua é fundamental: Tesouraria, Contabilidade e Tributação.</li>
+                <li>Governança e planejamento: eficiência, eficácia e proteção.</li>
               </ul>
             </article>
           </div>
         </div>
         <div class="day-group">
-          <div class="day-group__label"><span>09/12</span></div>
+          <div class="day-group__label"><span>21/10</span></div>
           <div class="day-group__panels">
             <article class="panel">
-              <div class="panel__head"><h3>Operação Tesouraria: Do Empenho ao Pagamento</h3><span class="panel__time">Marcio Assumpção · 09h–12h</span></div>
+              <div class="panel__head"><h3>Operação Tesouraria — Do Empenho ao Pagamento</h3><span class="panel__time">Marcio Assumpção · 14h–17h</span></div>
               <ul class="panel__topics">
                 <li>Checklists de segurança: o que conferir antes de apertar o botão de “pagar”.</li>
-                <li>Cronograma de desembolso: evitando o sufoco de fim de ano.</li>
+                <li>Cronograma mensal de desembolso: evitando o sufoco de fim de mês.</li>
+                <li>Gestão de restos a pagar e despesas de exercícios anteriores.</li>
                 <li>Organização de processos e documentos para auditorias e Tribunais de Contas.</li>
-              </ul>
-            </article>
-            <article class="panel">
-              <div class="panel__head"><h3>Restos a Pagar, Cancelamento de Empenhos e Suficiência de Caixa</h3><span class="panel__time">Marcio Assumpção · 14h–17h</span></div>
-              <ul class="panel__topics">
-                <li>Inscrição em Restos a Pagar: RPP e RPNP.</li>
-                <li>Cancelamento de saldos de empenho.</li>
-                <li>Suficiência de caixa.</li>
-                <li>Despesas de Exercícios Anteriores (DEA).</li>
+                <li>Laboratório do Erro: “O empenho que não foi pago”.</li>
               </ul>
             </article>
           </div>
         </div>
         <div class="day-group">
-          <div class="day-group__label"><span>10/12</span></div>
+          <div class="day-group__label"><span>22/10</span></div>
           <div class="day-group__panels">
             <article class="panel">
-              <div class="panel__head"><h3>Conciliação Bancária e Disponibilidades no Fechamento</h3><span class="panel__time">Nilson Tognato · 09h–12h</span></div>
+              <div class="panel__head"><h3>Conciliação Bancária e Controle de Disponibilidades</h3><span class="panel__time">Nilson Tognato · 09h–12h</span></div>
               <ul class="panel__topics">
-                <li>Conciliação diária: identificando divergências antes da virada do ano.</li>
-                <li>Recursos vinculados e convênios: como não misturar as fontes.</li>
-                <li>Aplicações financeiras e rendimentos.</li>
-                <li>Fechamento do caixa e pendências junto à contabilidade.</li>
+                <li>Técnica de conciliação diária: identificando divergências em tempo real.</li>
+                <li>Gestão de contas específicas e convênios: como não misturar recursos vinculados.</li>
+                <li>Aplicações financeiras e rendimentos: segurança e rentabilidade pública.</li>
+                <li>O fechamento do caixa: ferramentas práticas para bater com a contabilidade.</li>
+                <li>Exercício rápido: “Encontre o erro na conciliação”.</li>
               </ul>
             </article>
             <article class="panel">
-              <div class="panel__head"><h3>Limites Constitucionais e a LRF no Fim do Exercício</h3><span class="panel__time">Docente a definir · 14h–17h</span></div>
+              <div class="panel__head"><h3>Tecnologia e Inovação no Setor Financeiro</h3><span class="panel__time">Daniel Bueno · 14h–17h</span></div>
               <ul class="panel__topics">
-                <li>Limites de Educação e Saúde.</li>
-                <li>Despesa Total com Pessoal.</li>
-                <li>Operações de crédito.</li>
-                <li>Mecanismo de ajuste fiscal — 95% RC vs DS.</li>
-                <li>Inadimplência junto à União (CAUC/SIAFI).</li>
+                <li>Inteligência Artificial aplicada: automação amiga e combate ao retrabalho.</li>
+                <li>Segurança cibernética na Tesouraria: prevenção a fraudes e ataques bancários.</li>
+                <li>Dashboards de indicadores: saúde financeira em gráficos.</li>
+                <li>O fim do papel: processo 100% digital no fluxo de pagamentos.</li>
+                <li>Sessão de compromisso: “O que vou implementar na minha tesouraria?”.</li>
               </ul>
             </article>
           </div>
         </div>
         <div class="day-group">
-          <div class="day-group__label"><span>11/12</span></div>
+          <div class="day-group__label"><span>23/10</span></div>
           <div class="day-group__panels">
             <article class="panel">
-              <div class="panel__head"><h3>Fiscalização, Controle Interno e Jurisprudência dos Tribunais de Contas</h3><span class="panel__time">Docente a definir · 09h–10h20</span></div>
+              <div class="panel__head"><h3>Encerramento · Soft Skills e Orientações Estratégicas</h3><span class="panel__time">Éderson Paz · 09h–11h</span></div>
               <ul class="panel__topics">
-                <li>O papel do controle interno e as correções tempestivas.</li>
-                <li>Julgados do TCU e dos TCEs aplicados ao encerramento.</li>
-                <li>Blindagem jurídica dos envolvidos.</li>
-              </ul>
-            </article>
-            <article class="panel">
-              <div class="panel__head"><h3>Encerramento · Tecnologia, Soft Skills e Painel de Checklist de Conformidade</h3><span class="panel__time">Daniel Bueno + Éderson Paz · 10h40–12h</span></div>
-              <ul class="panel__topics">
-                <li>Inteligência Artificial e dashboards aplicados ao fechamento.</li>
-                <li>Compliance e liderança sob pressão financeira.</li>
-                <li>Checklist final passo a passo e espaço para consultoria.</li>
+                <li>O perfil dos novos operadores: de executor a analista de dados.</li>
+                <li>Lifelong Learning e Upskilling: habilidades como fator de eficiência e risco zero.</li>
+                <li>Compliance e blindagem dos envolvidos.</li>
+                <li>Liderança e gestão de conflitos em ambientes sob pressão financeira.</li>
+                <li>Como convencer o gestor a investir em automação — case com ROI calculado.</li>
               </ul>
             </article>
           </div>
@@ -351,15 +338,15 @@
     <div class="wrap">
       <div class="sec-head is-center">
         <span class="kicker is-center">Para quem é</span>
-        <h2>Feito para quem fecha o exercício no setor público</h2>
+        <h2>Feito para quem opera as finanças do município</h2>
       </div>
       <div class="who__grid">
-        <div class="pcard"><span class="pcard__ic">@includeIf('seminarios.icons.chart', ['size' => 22])</span><span>Tesoureiros de entes públicos</span></div>
+        <div class="pcard"><span class="pcard__ic">@includeIf('seminarios.icons.chart', ['size' => 22])</span><span>Tesoureiros municipais</span></div>
         <div class="pcard"><span class="pcard__ic">@includeIf('seminarios.icons.file', ['size' => 22])</span><span>Contadores públicos</span></div>
         <div class="pcard"><span class="pcard__ic">@includeIf('seminarios.icons.shield-check', ['size' => 22])</span><span>Controladores internos</span></div>
         <div class="pcard"><span class="pcard__ic">@includeIf('seminarios.icons.award', ['size' => 22])</span><span>Secretários de Finanças</span></div>
-        <div class="pcard"><span class="pcard__ic">@includeIf('seminarios.icons.users-group', ['size' => 22])</span><span>Equipes de arrecadação e orçamento</span></div>
-        <div class="pcard"><span class="pcard__ic">@includeIf('seminarios.icons.star', ['size' => 22])</span><span>Gestores de estados, municípios e autarquias</span></div>
+        <div class="pcard"><span class="pcard__ic">@includeIf('seminarios.icons.users-group', ['size' => 22])</span><span>Equipes de arrecadação</span></div>
+        <div class="pcard"><span class="pcard__ic">@includeIf('seminarios.icons.star', ['size' => 22])</span><span>Gestores públicos e prefeituras</span></div>
       </div>
       <div class="sec-cta">
         <a href="#form-3" class="btn btn--cyan">Receber a programação <span class="arrow">→</span></a>
@@ -385,8 +372,8 @@
       </div>
       <div class="quote">
         <span class="quote__mark">“</span>
-        <blockquote>Saí com checklists prontos e um plano para fechar o exercício e reorganizar a conciliação do meu órgão. Valeu cada minuto.</blockquote>
-        <cite>— Participante de edição anterior, Secretaria de Finanças</cite>
+        <blockquote>Saí com checklists prontos e um plano para reorganizar a tesouraria e a conciliação da prefeitura. Valeu cada minuto.</blockquote>
+        <cite>— Participante de edição anterior, Secretaria de Finanças Municipal</cite>
       </div>
       <div class="sec-cta">
         <a href="#form-3" class="btn btn--cyan">Receber a programação <span class="arrow">→</span></a>
@@ -421,7 +408,7 @@
       <div class="sec-head is-center">
         <span class="kicker is-center">Corpo docente</span>
         <h2>Quem vai te ensinar</h2>
-        <p>Especialistas que operam, na prática, as finanças dos entes públicos — da nova gestão e do calendário de encerramento à tesouraria, restos a pagar, conciliação bancária, tecnologia e liderança.</p>
+        <p>Especialistas que operam, na prática, as finanças municipais — da nova gestão financeira e arrecadação à tesouraria, conciliação bancária, tecnologia e liderança.</p>
       </div>
       <div class="doc-grid">
         <article class="doc-card">
@@ -430,8 +417,8 @@
             <div class="doc-card__name"><h3>Paulo Feijó</h3><span class="doc-card__role">Nova Gestão Financeira</span></div></div>
           <div class="doc-card__body">
             <p class="doc-q">Abertura do seminário · Reforma Tributária</p>
-            <p class="doc-q">Receitas dos entes públicos para 2026</p>
-            <p class="doc-q">Governança e calendário de encerramento</p></div>
+            <p class="doc-q">Panorama econômico e receitas municipais para 2026</p>        
+            <p class="doc-q">Governança e integração do financeiro do município</p></div>
         </article>
         <article class="doc-card">
           <div class="doc-card__media"><span class="doc-card__idx">02</span>
@@ -439,7 +426,7 @@
             <div class="doc-card__name"><h3>Marcio Assumpção</h3><span class="doc-card__role">Tesouraria &amp; Pagamentos</span></div></div>
           <div class="doc-card__body">
             <p class="doc-q">Operação de tesouraria do empenho ao pagamento</p>
-            <p class="doc-q">Restos a pagar, cancelamento e suficiência de caixa</p>
+            <p class="doc-q">Restos a pagar e cronograma de desembolso</p>
             <p class="doc-q">Processos e documentos para Tribunais de Contas</p></div>
         </article>
         <article class="doc-card">
@@ -447,27 +434,27 @@
             <img src="{{ asset('img/seminarios/financas/doc-nilson.jpg') }}" alt="Nilson Tognato" loading="lazy">
             <div class="doc-card__name"><h3>Nilson Tognato</h3><span class="doc-card__role">Conciliação Bancária</span></div></div>
           <div class="doc-card__body">
-            <p class="doc-q">Conciliação e disponibilidades no fechamento</p>
+            <p class="doc-q">Conciliação diária e controle de disponibilidades</p>
             <p class="doc-q">Recursos vinculados, convênios e aplicações</p>
-            <p class="doc-q">Fechamento de caixa antes da virada do ano</p></div>
+            <p class="doc-q">Fechamento de caixa junto à contabilidade</p></div>
         </article>
         <article class="doc-card">
           <div class="doc-card__media"><span class="doc-card__idx">04</span>
             <img src="{{ asset('img/seminarios/financas/doc-daniel.jpg') }}" alt="Daniel Bueno" loading="lazy">
             <div class="doc-card__name"><h3>Daniel Bueno</h3><span class="doc-card__role">Tecnologia &amp; Inovação</span></div></div>
           <div class="doc-card__body">
-            <p class="doc-q">IA e dashboards aplicados ao fechamento</p>
-            <p class="doc-q">Segurança e processo de pagamentos digital</p>
-            <p class="doc-q">Painel de checklist de conformidade</p></div>
+            <p class="doc-q">IA aplicada à tesouraria e combate ao retrabalho</p>
+            <p class="doc-q">Segurança cibernética e prevenção a fraudes</p>
+            <p class="doc-q">Dashboards e processo de pagamentos 100% digital</p></div>
         </article>
         <article class="doc-card">
           <div class="doc-card__media"><span class="doc-card__idx">05</span>
             <img src="{{ asset('img/seminarios/financas/doc-eder.jpg') }}" alt="Éderson Paz" loading="lazy">
             <div class="doc-card__name"><h3>Éderson Paz</h3><span class="doc-card__role">Soft Skills &amp; Estratégia</span></div></div>
           <div class="doc-card__body">
-            <p class="doc-q">Soft skills e liderança sob pressão financeira</p>
-            <p class="doc-q">Compliance e blindagem dos envolvidos</p>
-            <p class="doc-q">Checklist final e plano de ação</p></div>
+            <p class="doc-q">De executor a analista de dados: o novo perfil</p>
+            <p class="doc-q">Compliance e liderança sob pressão financeira</p>
+            <p class="doc-q">ROI de automação e upskilling da equipe</p></div>
         </article>
       </div>
     </div>
@@ -514,7 +501,7 @@
           <img src="{{ asset('img/logo-unyflex-white.png') }}" alt="Unyflex">
           <img src="{{ asset('img/logo-unypublica-white.png') }}" alt="Faculdade Unypública">
         </div>
-        <p>Encerramento de Exercício nas Finanças Públicas · Da tesouraria à prestação de contas. Realização: Unyflex Digital · Faculdade Unypública.</p>
+        <p>Seminário Finanças Municipais · Sincronização híbrida na Tesouraria e Contabilidade. Realização: Unyflex Digital · Faculdade Unypública.</p>
       </div>
       <div class="footer__links">
         <a href="#">Política de Privacidade</a>
@@ -561,4 +548,4 @@
     })();
   </script>
 
-@endsection      
+@endsection
