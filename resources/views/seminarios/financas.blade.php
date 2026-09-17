@@ -245,7 +245,7 @@
       <div class="prog-days">
         <div class="day-group">
           <div class="day-group__label"><span>08/12</span></div>
-          <div class="day-group__panels">
+          <div class="day-group__panels">        
             <article class="panel">
               <div class="panel__head"><h3>Abertura · A Nova Gestão das Finanças Públicas e a Reforma Tributária</h3><span class="panel__time">Paulo Feijó · 14h–15h20</span></div>
               <ul class="panel__topics">
@@ -426,7 +426,7 @@
       <div class="doc-grid">
         <article class="doc-card">
           <div class="doc-card__media"><span class="doc-card__idx">01</span><span class="doc-badge">Destaque</span>
-            <img src="{{ asset('img/seminarios/financas/doc-paulofeijo.jpg') }}" alt="Paulo Feijó" loading="lazy">
+            <img src="https://unyflex.com.br/storage/fav/doc-paulofeijo.jpg" alt="Paulo Feijó" loading="lazy">
             <div class="doc-card__name"><h3>Paulo Feijó</h3><span class="doc-card__role">Nova Gestão Financeira</span></div></div>
           <div class="doc-card__body">
             <p class="doc-q">Abertura do seminário · Reforma Tributária</p>
