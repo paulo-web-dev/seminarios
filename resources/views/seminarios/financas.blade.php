@@ -1,7 +1,7 @@
 @extends('layouts.financas')
 
 @section('title', 'Seminário Finanças Públicas · Programação completa + modelo de empenho · Curitiba')
-@section('description', 'Sua tesouraria e sua contabilidade não fecham? Sincronização híbrida na Tesouraria e Contabilidade — do empenho ao pagamento, com conciliação, Reforma Tributária e tecnologia. Imersão presencial, 20 a 23 de outubro de 2026, em Curitiba. Receba a programação completa em PDF + o modelo pronto de justificativa para inscrição via nota de empenho.')
+@section('description', 'Sua tesouraria e sua contabilidade não fecham? Sincronização híbrida na Tesouraria e Contabilidade — da nova contabilidade pública e do TCE à conciliação, arrecadação e modernização da tesouraria. Imersão presencial, 20 a 23 de outubro de 2026, em Curitiba. Receba a programação completa em PDF + o modelo pronto de justificativa para inscrição via nota de empenho.')
 
 @push('head')
   {{-- ============ META PIXEL (base: init + PageView) ============ --}}
@@ -78,7 +78,7 @@
       <h1>Sua <span class="cy">tesouraria</span> e sua <span class="cy">contabilidade</span> não fecham?</h1>
 
       <p class="hero__sub">Sincronização híbrida na Tesouraria e Contabilidade</p>
-      <p class="hero__desc">Quatro dias de imersão para o financeiro público colocar a tesouraria e a contabilidade na mesma página — do empenho ao pagamento, com conciliação bancária, tecnologia e a Reforma Tributária aplicadas à realidade do seu órgão.</p>
+      <p class="hero__desc">Quatro dias de imersão para o financeiro público colocar a tesouraria e a contabilidade na mesma página — da nova contabilidade pública e do TCE à conciliação bancária, arrecadação, tecnologia e modernização da tesouraria, na realidade do seu órgão.</p>
 
       <p class="hero__event">
         <span>20 a 23/10</span><span class="sep"></span><span>Curitiba/PR</span><span class="sep"></span><span>17h de carga horária</span>
@@ -121,23 +121,23 @@
       <div class="sec-head">
         <span class="kicker">Por que participar</span>
         <h2>Uma imersão pensada para a rotina do financeiro público</h2>
-        <p>Tesouraria, contabilidade e controle falando a mesma língua o ano inteiro. Do empenho ao pagamento à conciliação bancária, com a Reforma Tributária e a tecnologia aplicadas ao dia a dia do setor público — com segurança, eficiência e conformidade.</p>
+        <p>Tesouraria, contabilidade e controle falando a mesma língua o ano inteiro. Da nova contabilidade pública e do TCE à conciliação bancária, arrecadação e modernização da tesouraria — com segurança, eficiência e conformidade.</p>
       </div>
       <div class="cards3">
         <article class="fcard">
           <div class="fcard__icon">@includeIf('seminarios.icons.chart', ['size' => 26])</div>
-          <h3>Do empenho ao pagamento</h3>
-          <p>Operação de tesouraria com checklists de segurança, cronograma de desembolso e gestão de restos a pagar — organizada para auditorias e Tribunais de Contas.</p>
+          <h3>Nova contabilidade pública &amp; TCE</h3>
+          <p>As novas normas de contabilidade pública, o PCASP e o SICONFI, e como blindar a prestação de contas dos apontamentos do Tribunal de Contas.</p>
         </article>
         <article class="fcard">
           <div class="fcard__icon">@includeIf('seminarios.icons.target', ['size' => 26])</div>
-          <h3>Reforma Tributária e conciliação</h3>
-          <p>O que muda na rotina do financeiro público, o impacto nas receitas para 2026 e a conciliação bancária diária de disponibilidades, recursos vinculados e convênios.</p>
+          <h3>Conciliação e arrecadação</h3>
+          <p>Conciliação bancária diária de disponibilidades e recursos vinculados, fluxo de caixa projetado, cobrança administrativa e a modernização dos recebimentos (Pix).</p>
         </article>
         <article class="fcard">
           <div class="fcard__icon">@includeIf('seminarios.icons.shield-check', ['size' => 26])</div>
-          <h3>Tecnologia e conformidade</h3>
-          <p>Inteligência Artificial aplicada à tesouraria, dashboards de indicadores, segurança cibernética e o processo de pagamentos 100% digital.</p>
+          <h3>Tecnologia e modernização</h3>
+          <p>Inteligência Artificial aplicada à tesouraria, dashboards de indicadores, segurança cibernética e a modernização da gestão de tesouraria (CUT, PCASP).</p>
         </article>
       </div>
       <div class="sec-cta">
@@ -240,24 +240,20 @@
       <div class="sec-head">
         <span class="kicker">Programação</span>
         <h2>A ementa, painel por painel</h2>
-        <p>De 20 a 23 de outubro de 2026 — a jornada completa do financeiro público: da nova gestão e da integração à operação de tesouraria, conciliação bancária, tecnologia e soft skills. Cinco especialistas, seis painéis.</p>
+        <p>De 20 a 23 de outubro de 2026 — a jornada completa do financeiro público: da nova contabilidade pública e do TCE à conciliação, soft skills, tecnologia, arrecadação e modernização da tesouraria. Cinco especialistas, seis painéis.</p>
       </div>
       <div class="prog-days">
         <div class="day-group">
           <div class="day-group__label"><span>20/10</span></div>
           <div class="day-group__panels">
             <article class="panel">
-              <div class="panel__head"><h3>Abertura · A Nova Gestão Financeira: Desafios e Oportunidades</h3><span class="panel__time">Paulo Feijó · 14h–15h20</span></div>
+              <div class="panel__head"><h3>A Nova Contabilidade Pública conforme o TCE</h3><span class="panel__time">Marcio Assumpção · 14h–17h</span></div>
               <ul class="panel__topics">
-                <li>Panorama econômico e o impacto nas receitas públicas para 2026.</li>
-                <li>A transição para a Reforma Tributária: o que muda na rotina do financeiro.</li>
-              </ul>
-            </article>
-            <article class="panel">
-              <div class="panel__head"><h3>Integração Multifacetária nas Finanças Públicas</h3><span class="panel__time">Paulo Feijó · 15h40–17h</span></div>
-              <ul class="panel__topics">
-                <li>Falar a mesma língua é fundamental: Tesouraria, Contabilidade e Tributação.</li>
-                <li>Governança e planejamento: eficiência, eficácia e proteção.</li>
+                <li>O que muda com as novas normas de contabilidade pública e as exigências do TCE.</li>
+                <li>Reconhecimento patrimonial de receitas e despesas: competência, empenho e liquidação.</li>
+                <li>Escrituração e o PCASP: conformidade com o SICONFI e a Matriz de Saldos Contábeis (MSC).</li>
+                <li>Os apontamentos mais comuns do TCE e como blindar a prestação de contas.</li>
+                <li>Checklist prático: preparando a contabilidade para a fiscalização.</li>
               </ul>
             </article>
           </div>
@@ -266,12 +262,21 @@
           <div class="day-group__label"><span>21/10</span></div>
           <div class="day-group__panels">
             <article class="panel">
-              <div class="panel__head"><h3>Operação Tesouraria — Do Empenho ao Pagamento</h3><span class="panel__time">Marcio Assumpção · 14h–17h</span></div>
+              <div class="panel__head"><h3>Conciliação Bancária e Controle de Disponibilidades</h3><span class="panel__time">Daniel Bueno · 09h–12h</span></div>
               <ul class="panel__topics">
-                <li>Checklists de segurança: o que conferir antes de apertar o botão de “pagar”.</li>
-                <li>Cronograma mensal de desembolso: evitando o sufoco de fim de mês.</li>
-                <li>Gestão de restos a pagar e despesas de exercícios anteriores.</li>
-                <li>Organização de processos e documentos para auditorias e Tribunais de Contas.</li>
+                <li>Técnica de conciliação diária: identificando divergências em tempo real.</li>
+                <li>Contas específicas e convênios: como não misturar recursos vinculados.</li>
+                <li>Aplicações financeiras e rendimentos: segurança e rentabilidade pública.</li>
+                <li>O fechamento do caixa junto à contabilidade.</li>
+              </ul>
+            </article>
+            <article class="panel">
+              <div class="panel__head"><h3>Soft Skills e Orientações Estratégicas</h3><span class="panel__time">Éderson Paz · 14h–17h</span></div>
+              <ul class="panel__topics">
+                <li>O perfil dos novos operadores: de executor a analista de dados.</li>
+                <li>Lifelong learning e upskilling: habilidades como fator de eficiência.</li>
+                <li>Compliance e blindagem dos envolvidos.</li>
+                <li>Liderança e gestão de conflitos em ambientes sob pressão financeira.</li>
               </ul>
             </article>
           </div>
@@ -280,21 +285,21 @@
           <div class="day-group__label"><span>22/10</span></div>
           <div class="day-group__panels">
             <article class="panel">
-              <div class="panel__head"><h3>Conciliação Bancária e Controle de Disponibilidades</h3><span class="panel__time">Nilson Tognato · 09h–12h</span></div>
-              <ul class="panel__topics">
-                <li>Técnica de conciliação diária: identificando divergências em tempo real.</li>
-                <li>Contas específicas e convênios: como não misturar recursos vinculados.</li>
-                <li>Aplicações financeiras e rendimentos.</li>
-                <li>O fechamento do caixa junto à contabilidade.</li>
-              </ul>
-            </article>
-            <article class="panel">
-              <div class="panel__head"><h3>Tecnologia e Inovação no Setor Financeiro</h3><span class="panel__time">Daniel Bueno · 14h–17h</span></div>
+              <div class="panel__head"><h3>Tecnologia e Inovação no Setor Financeiro</h3><span class="panel__time">Éderson Paz · 09h–12h</span></div>
               <ul class="panel__topics">
                 <li>Inteligência Artificial aplicada: automação amiga e combate ao retrabalho.</li>
                 <li>Segurança cibernética na Tesouraria: prevenção a fraudes e ataques bancários.</li>
                 <li>Dashboards de indicadores: a saúde financeira em gráficos.</li>
                 <li>O fim do papel: processo 100% digital no fluxo de pagamentos.</li>
+              </ul>
+            </article>
+            <article class="panel">
+              <div class="panel__head"><h3>Gestão Eficiente da Receita e Arrecadação</h3><span class="panel__time">Nilson Tognato · 14h–17h</span></div>
+              <ul class="panel__topics">
+                <li>Fluxo de caixa projetado: antecipando receitas para garantir pagamentos.</li>
+                <li>O papel do financeiro na cobrança administrativa e recuperação de créditos.</li>
+                <li>Retenções tributárias na fonte: os 5 erros fatais.</li>
+                <li>Modernização dos meios de recebimento (Pix, boletos híbridos e automação).</li>
               </ul>
             </article>
           </div>
@@ -303,12 +308,12 @@
           <div class="day-group__label"><span>23/10</span></div>
           <div class="day-group__panels">
             <article class="panel">
-              <div class="panel__head"><h3>Encerramento · Soft Skills e Orientações Estratégicas</h3><span class="panel__time">Éderson Paz · 09h–11h</span></div>
+              <div class="panel__head"><h3>Modernização da Gestão Financeira no Setor Público</h3><span class="panel__time">Paulo Feijó · 09h–11h</span></div>
               <ul class="panel__topics">
-                <li>O perfil dos novos operadores: de executor a analista de dados.</li>
-                <li>Lifelong learning e upskilling: habilidades como fator de eficiência.</li>
-                <li>Compliance e blindagem dos envolvidos.</li>
-                <li>Liderança e gestão de conflitos em ambientes sob pressão financeira.</li>
+                <li>Modernização da gestão de tesouraria: maturidade e dimensões da modernização.</li>
+                <li>Requisitos, estratégias e etapas das reformas.</li>
+                <li>Controle dos ingressos e saídas de recursos da Conta Única do Tesouro (CUT).</li>
+                <li>Contabilização, controle por conta-corrente no PCASP e conciliação bancária.</li>
               </ul>
             </article>
           </div>
@@ -404,53 +409,53 @@
       <div class="sec-head is-center">
         <span class="kicker is-center">Corpo docente</span>
         <h2>Quem vai te ensinar</h2>
-        <p>Especialistas que operam, na prática, as finanças do setor público — da nova gestão e da integração à tesouraria, conciliação bancária, tecnologia e liderança.</p>
+        <p>Especialistas que operam, na prática, as finanças do setor público — da contabilidade e da arrecadação à conciliação, tecnologia e modernização da tesouraria.</p>
       </div>
       <div class="doc-grid">
         <article class="doc-card">
           <div class="doc-card__media"><span class="doc-card__idx">01</span><span class="doc-badge">Destaque</span>
             <img src="https://unyflex.com.br/storage/fav/doc-paulofeijo.jpg" alt="Paulo Feijó" loading="lazy">
-            <div class="doc-card__name"><h3>Paulo Feijó</h3><span class="doc-card__role">Nova Gestão Financeira</span></div></div>
+            <div class="doc-card__name"><h3>Paulo Feijó</h3><span class="doc-card__role">Modernização Financeira</span></div></div>
           <div class="doc-card__body">      
-            <p class="doc-q">Abertura do seminário · Reforma Tributária</p>
-            <p class="doc-q">Panorama econômico e receitas públicas para 2026</p>
-            <p class="doc-q">Governança e integração do financeiro público</p></div>
+            <p class="doc-q">Modernização da gestão de tesouraria e maturidade</p>
+            <p class="doc-q">Conta Única do Tesouro (CUT) e PCASP</p>
+            <p class="doc-q">Contabilização e conciliação bancária</p></div>
         </article>
         <article class="doc-card">
           <div class="doc-card__media"><span class="doc-card__idx">02</span>
             <img src="{{ asset('img/seminarios/financas/doc-marcio.jpg') }}" alt="Marcio Assumpção" loading="lazy">
-            <div class="doc-card__name"><h3>Marcio Assumpção</h3><span class="doc-card__role">Tesouraria &amp; Pagamentos</span></div></div>
+            <div class="doc-card__name"><h3>Marcio Assumpção</h3><span class="doc-card__role">Contabilidade Pública &amp; TCE</span></div></div>
           <div class="doc-card__body">
-            <p class="doc-q">Operação de tesouraria do empenho ao pagamento</p>
-            <p class="doc-q">Restos a pagar e cronograma de desembolso</p>
-            <p class="doc-q">Processos e documentos para Tribunais de Contas</p></div>
+            <p class="doc-q">A nova contabilidade pública conforme o TCE</p>
+            <p class="doc-q">PCASP, SICONFI e a Matriz de Saldos Contábeis</p>
+            <p class="doc-q">Apontamentos do TCE e prestação de contas</p></div>
         </article>
         <article class="doc-card">
           <div class="doc-card__media"><span class="doc-card__idx">03</span>
             <img src="{{ asset('img/seminarios/financas/doc-nilson.jpg') }}" alt="Nilson Tognato" loading="lazy">
-            <div class="doc-card__name"><h3>Nilson Tognato</h3><span class="doc-card__role">Conciliação Bancária</span></div></div>
+            <div class="doc-card__name"><h3>Nilson Tognato</h3><span class="doc-card__role">Receita &amp; Arrecadação</span></div></div>
+          <div class="doc-card__body">
+            <p class="doc-q">Fluxo de caixa projetado e cobrança administrativa</p>
+            <p class="doc-q">Retenções tributárias na fonte</p>
+            <p class="doc-q">Modernização dos recebimentos (Pix e automação)</p></div>
+        </article>
+        <article class="doc-card">
+          <div class="doc-card__media"><span class="doc-card__idx">04</span>
+            <img src="{{ asset('img/seminarios/financas/doc-daniel.jpg') }}" alt="Daniel Bueno" loading="lazy">
+            <div class="doc-card__name"><h3>Daniel Bueno</h3><span class="doc-card__role">Conciliação Bancária</span></div></div>
           <div class="doc-card__body">
             <p class="doc-q">Conciliação diária e controle de disponibilidades</p>
             <p class="doc-q">Recursos vinculados, convênios e aplicações</p>
             <p class="doc-q">Fechamento de caixa junto à contabilidade</p></div>
         </article>
         <article class="doc-card">
-          <div class="doc-card__media"><span class="doc-card__idx">04</span>
-            <img src="{{ asset('img/seminarios/financas/doc-daniel.jpg') }}" alt="Daniel Bueno" loading="lazy">
-            <div class="doc-card__name"><h3>Daniel Bueno</h3><span class="doc-card__role">Tecnologia &amp; Inovação</span></div></div>
-          <div class="doc-card__body">
-            <p class="doc-q">IA aplicada à tesouraria e combate ao retrabalho</p>
-            <p class="doc-q">Segurança cibernética e prevenção a fraudes</p>
-            <p class="doc-q">Dashboards e pagamentos 100% digitais</p></div>
-        </article>
-        <article class="doc-card">
           <div class="doc-card__media"><span class="doc-card__idx">05</span>
             <img src="{{ asset('img/seminarios/financas/doc-eder.jpg') }}" alt="Éderson Paz" loading="lazy">
-            <div class="doc-card__name"><h3>Éderson Paz</h3><span class="doc-card__role">Soft Skills &amp; Estratégia</span></div></div>
+            <div class="doc-card__name"><h3>Éderson Paz</h3><span class="doc-card__role">Soft Skills &amp; Tecnologia</span></div></div>
           <div class="doc-card__body">
-            <p class="doc-q">De executor a analista de dados</p>
-            <p class="doc-q">Compliance e liderança sob pressão financeira</p>
-            <p class="doc-q">ROI de automação e upskilling da equipe</p></div>
+            <p class="doc-q">De executor a analista de dados; liderança</p>
+            <p class="doc-q">IA aplicada e segurança cibernética</p>
+            <p class="doc-q">Dashboards e pagamentos 100% digitais</p></div>
         </article>
       </div>
     </div>
@@ -544,4 +549,4 @@
     })();
   </script>
 
-@endsection
+@endsection      
